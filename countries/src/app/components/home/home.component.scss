@@ -1,3 +1,4 @@
+$nav-grey: #26282b;
 .toolbar {
     position: absolute;
     top: 0;
@@ -6,7 +7,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    background-color: #26282b;
+    background-color: $nav-grey;
     color: white;
     font-weight: 600;
   }
@@ -17,9 +18,7 @@
 
   .content {
     display: flex;
-    margin: 82px auto 32px;
+    margin-top: 82px;
     padding: 0 16px;
-    max-width: 960px;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-evenly;
   }

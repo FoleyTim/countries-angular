@@ -6,5 +6,6 @@
 </div>
 
 <div class="content">
-
+    <app-dropdown [values] ="regions" [label]="'Region'" (selectEvent)='getCountries($event)'></app-dropdown>
+    <app-dropdown [values] ="countries" [label]="'Country'"></app-dropdown>
 </div>
