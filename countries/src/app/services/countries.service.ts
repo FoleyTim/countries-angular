@@ -17,10 +17,15 @@ export class CountriesService {
   getCountries(region): Observable<Country[]> {
     let url: string = 'https://restcountries.eu/rest/v2/region/'
     return this.http.get(`${url}${region}`).pipe(
-      map((data: Country[]) => {
-        return data;
+      map((data: any) => {
+        const countries: Country[] = []
+        data.forEach((countryData) => {
+          const country = new Country(countryData);
+          countries.push(country);
+        })
+        return countries;
       }), catchError(error => {
-        return throwError('failed to add countries in country service');
+        return throwError('failed to add countries in country service ', error);
       })
     );
   }

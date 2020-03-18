@@ -4,7 +4,7 @@ import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../models/country'
 
 @Component({
-  selector: 'app-dropdown',
+  selector: 'dropdown',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss']
 })
@@ -20,6 +20,7 @@ export class DropdownComponent implements OnInit {
   }
 
   onSelect(event) {
+    console.log('!!!',event.target)
     this.selectEvent.emit(event.target.value);
   }
 }

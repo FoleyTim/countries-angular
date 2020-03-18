@@ -10,23 +10,26 @@ import { Country } from './models/country';
 })
 export class AppComponent {
   title = 'countries';
-    regions: string[] = ['Asia', 'Europe'];
-    countries: string[] = ['example'];
-    constructor(
-      private countriesService: CountriesService
-    ) { }
-  
-    ngOnInit(): void {}
-  
-  
-    getCountries(region) {
-      console.log(region)
-      this.countriesService.getCountries(region).subscribe((countries: Country[]) => {
-        this.countries = [];
-        for (const country of countries) {
-          this.countries.push(country.name);
-        }
-      });
-    }
-  
+  regions: any[] = [{ name: 'Asia' }, { name: 'Europe' }];
+  countries: Country[] = [];
+  selectedCountry: Country;
+  constructor(
+    private countriesService: CountriesService
+  ) { }
+
+  ngOnInit(): void { }
+
+
+  getCountries(regionIndex) {
+    this.countriesService.getCountries(this.regions[regionIndex].name).subscribe((countries: Country[]) => {
+      console.log(countries)
+      this.countries = [];
+      for (const country of countries) {
+        this.countries.push(country);
+      }
+    });
   }
+  setCountry(countryIndex) {
+    this.selectedCountry = this.countries[countryIndex];
+  }
+}

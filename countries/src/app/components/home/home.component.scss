@@ -5,11 +5,18 @@ $nav-grey: #26282b;
     left: 0;
     right: 0;
     height: 60px;
-    display: flex;
-    align-items: center;
     background-color: $nav-grey;
     color: white;
     font-weight: 600;
+  }
+  .dropdown-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .country-details{
+    display: flex;
+    justify-content: center;
   }
 
   .toolbar img {
@@ -17,8 +24,6 @@ $nav-grey: #26282b;
   }
 
   .content {
-    display: flex;
     margin-top: 82px;
     padding: 0 16px;
-    justify-content: space-evenly;
   }

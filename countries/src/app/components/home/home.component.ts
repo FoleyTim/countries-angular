@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  regions: string[] = ['Asia', 'Europe'];
+  regions: any[] = [{ name: 'Asia' }, { name: 'Europe' }];
   countries: string[] = ['example'];
+  selectedCountry: string;
   constructor(
   ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
+  getCountries(region) { }
+  setCountry(country) {
+    console.log('country is ', country)
+    this.selectedCountry = country;
+  }
 }
+//
