@@ -7,9 +7,7 @@ export const SELECT_COUNTRY = '[COUNTRY] SELECT';
 
 export class SetCountries implements Action {
     readonly type = SET_COUNTRIES;
-    constructor(public payload: Country[]) {
-        console.log('action: ', payload);
-    }
+    constructor(public payload: Country[]) { }
 }
 
 export class SelectCountry implements Action { //not in use

@@ -18,9 +18,6 @@ const initialState: Country[] = [new Country({
 export function countryReducer(state: Country[] = initialState, action: CountryActions.Actions) {
     switch (action.type) {
         case CountryActions.SET_COUNTRIES:
-            console.log('REDUCER')
-            console.log('state:', state);
-            console.log(action.payload);
             return action.payload;
         default:
             return state;

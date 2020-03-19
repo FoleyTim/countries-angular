@@ -24,7 +24,7 @@ import { countryReducer } from '@app/store/reducers/country.reducer';
     AppRoutingModule,
     HttpClientModule,
     StoreModule.forRoot({
-      country: countryReducer
+      countries: countryReducer
     })
   ],
   providers: [],
