@@ -14,31 +14,28 @@ import { Appstate } from '@app/store/app.state';
 })
 export class AppComponent {
   title = 'countries';
-  regionsArray: any[] = [{ name: 'Asia' }, { name: 'Europe' }];
-  regions: Observable<any[]> = new Observable(subscriber => {
-    subscriber.next(this.regionsArray);
-  });
-  countries: Observable<Country[]>;
+  regions: any[] = [{ name: 'Asia' }, { name: 'Europe' }];
+  countries: Country[];
   selectedCountry: Country;
   constructor(
     private countriesService: CountriesService,
     private store: Store<Appstate>
   ) {
-    this.countries = store.select('countries');
+    store.select('countries').subscribe((countries) => {
+      this.countries = countries;
+    });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
 
   getCountries(regionIndex) {
-    this.countriesService.getCountries(this.regionsArray[regionIndex].name).subscribe((countries: Country[]) => {
+    this.countriesService.getCountries(this.regions[regionIndex].name).subscribe((countries: Country[]) => {
       this.store.dispatch(new CountryActions.SetCountries(countries));
     });
   }
-  
+
   setCountry(countryIndex) {
-    this.countries.subscribe((countries) => {
-      this.selectedCountry = countries[countryIndex];
-    });
+    this.selectedCountry = this.countries[countryIndex];
   }
 }

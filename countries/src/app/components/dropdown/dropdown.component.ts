@@ -9,7 +9,7 @@ import { Country } from '../../models/country'
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent implements OnInit {
-  @Input() values: Promise<any>;
+  @Input() values: string[];
   @Input() label: string;
   @Output() selectEvent = new EventEmitter();
 
