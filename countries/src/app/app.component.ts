@@ -22,7 +22,7 @@ export class AppComponent {
 
   getCountries(regionIndex) {
     this.countriesService.getCountries(this.regions[regionIndex].name).subscribe((countries: Country[]) => {
-      console.log(countries)
+      console.log(countries);
       this.countries = [];
       for (const country of countries) {
         this.countries.push(country);
