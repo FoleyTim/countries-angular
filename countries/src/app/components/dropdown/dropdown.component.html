@@ -1,6 +1,6 @@
 <div class="drop-down-container">
         <label>{{label}}: </label>
         <select class="select" (change)="onSelect($event)" formControlName="valueName">
-            <option *ngFor="let value of values;let i =index" [value]="i">{{value.name}}</option>
+            <option *ngFor="let value of values | async;let i =index" [value]="i">{{value.name}}</option>
          </select>
 </div>

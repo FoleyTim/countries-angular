@@ -10,7 +10,6 @@ import { AppComponent } from '@app/app.component';
 import { HomeComponent } from '@app/components/home/home.component';
 import { DropdownComponent } from '@app/components/dropdown/dropdown.component';
 import { CountryDetailsComponent } from '@app/components/country-details/country-details.component';
-import { AppStoreModule } from '@app/store/app-store.module';
 import { countryReducer } from '@app/store/reducers/country.reducer';
 
 @NgModule({
@@ -24,7 +23,6 @@ import { countryReducer } from '@app/store/reducers/country.reducer';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AppStoreModule,
     StoreModule.forRoot({
       country: countryReducer
     })

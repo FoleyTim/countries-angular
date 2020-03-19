@@ -15,8 +15,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void { }
   getCountries(region) { }
   setCountry(country) {
-    console.log('country is ', country)
     this.selectedCountry = country;
   }
 }
-//

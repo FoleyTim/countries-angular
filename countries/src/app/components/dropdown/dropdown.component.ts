@@ -9,7 +9,7 @@ import { Country } from '../../models/country'
   styleUrls: ['./dropdown.component.scss']
 })
 export class DropdownComponent implements OnInit {
-  @Input() values: string[];
+  @Input() values: Promise<any>;
   @Input() label: string;
   @Output() selectEvent = new EventEmitter();
 
@@ -20,7 +20,6 @@ export class DropdownComponent implements OnInit {
   }
 
   onSelect(event) {
-    console.log('!!!',event.target)
     this.selectEvent.emit(event.target.value);
   }
 }
