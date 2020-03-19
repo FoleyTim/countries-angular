@@ -1,14 +1,17 @@
 <table class="table">
-        <tr>
-          <th>Name</th>
-          <th>Population</th>
-          <th>Currencies</th>
-          <th>flag</th>
-        </tr>
-        <tr>
-          <td>{{country.name}}</td>
-          <td>{{country.population}}</td>
-          <td>{{country.currencies}}</td>
-          <td>{{country.flag}}</td>
-        </tr>
-      </table>
+  <tr>
+    <th>Name</th>
+    <th>Population</th>
+    <th>Currencies</th>
+    <th>flag</th>
+  </tr>
+  <tr>
+    <td>{{country.name}}</td>
+    <td>{{country.population}}</td>
+    <td>
+      <p *ngFor="let currency of country.currencies">{{currency.name}} {{currency.symbol}} </p>
+    </td>
+    <td>
+      <img src="{{country.flag}}" width="42">
+  </tr>
+</table>

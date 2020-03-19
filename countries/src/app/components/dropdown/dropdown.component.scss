@@ -1,4 +1,42 @@
+$logo-blue: #0018A8;
 .drop-down-container{
-    width:500px;
-    background-color: grey;
+    background-color: $logo-blue;
+    padding:5px;
+    color: rgba(255, 255, 255, 0.5);
+
 }
+
+.drop-down-container select {
+    background-color: $logo-blue;
+    color: white;
+    padding: 12px;
+    width: 250px;
+    border: none;
+    font-size: 20px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+    -webkit-appearance: button;
+    appearance: button;
+    outline: none;
+  }
+  
+  .drop-down-container::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20%;
+    height: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 45px;
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+  }
+  
+  .drop-down-container:hover::before {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  
+  .drop-down-container select option {
+    padding: 30px;
+  }

@@ -3,19 +3,7 @@ import { Country } from '@app/models/country';
 import { Currency } from '@app/models/currency';
 import * as CountryActions from '@app/store/actions/country.action';
 
-const initCurrency = new Currency({
-    code: '',
-    symbol: '',
-    name: ''
-})
-const initialState: Country[] = [new Country({
-    name: '',
-    population: '',
-    flag: '',
-    currencies: [initCurrency]
-})];
-
-export function countryReducer(state: Country[] = initialState, action: CountryActions.Actions) {
+export function countryReducer(state: Country[] , action: CountryActions.Actions) {
     switch (action.type) {
         case CountryActions.SET_COUNTRIES:
             return action.payload;

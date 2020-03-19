@@ -1,4 +1,11 @@
 $nav-grey: #26282b;
+#logo{
+  padding:10px;
+}
+#title{
+  display: flex;
+  align-items: center;
+}
 .toolbar {
     position: absolute;
     top: 0;
@@ -8,6 +15,7 @@ $nav-grey: #26282b;
     background-color: $nav-grey;
     color: white;
     font-weight: 600;
+    display: flex;
   }
   .dropdown-bar{
     display: flex;
