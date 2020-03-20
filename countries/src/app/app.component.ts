@@ -21,8 +21,11 @@ export class AppComponent {
     private countriesService: CountriesService,
     private store: Store<Appstate>
   ) {
-    store.select('countries').subscribe((countries) => {
-      this.countries = countries;
+    store.select('countries').subscribe((state) => {
+      if (state) {
+        this.countries = state.countries;
+        this.selectedCountry = state.selectedCountry;
+      }
     });
   }
 
@@ -33,11 +36,11 @@ export class AppComponent {
     this.countriesService.getCountries(this.regions[regionIndex].name).subscribe((countries: Country[]) => {
       this.store.dispatch(new CountryActions.SetCountries(countries));
     },
-      () => (alert('API call failed'))
+      () => (alert('Failed to retrieve countries data'))
     );
   }
 
   setCountry(countryIndex) {
-    this.selectedCountry = this.countries[countryIndex];
+    this.store.dispatch(new CountryActions.SelectCountry(this.countries[countryIndex]));
   }
 }
