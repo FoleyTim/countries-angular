@@ -8,14 +8,15 @@ describe('CountryDetailsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CountryDetailsComponent ]
+      declarations: [CountryDetailsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(CountryDetailsComponent);
     component = fixture.componentInstance;
+    component.country = { name: '', population: '', currencies: [], flag: '', capital: '' };
     fixture.detectChanges();
   });
 

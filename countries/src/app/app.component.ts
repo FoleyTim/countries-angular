@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
-import { select, Store } from '@ngrx/store';
+import {Store } from '@ngrx/store';
 
 import * as CountryActions from '@app/store/actions/country.action';
 import { CountriesService } from './services/countries.service';
@@ -12,6 +11,7 @@ import { Appstate } from '@app/store/app.state';
   templateUrl: './components/home/home.component.html',
   styleUrls: ['./components/home/home.component.scss']
 })
+
 export class AppComponent {
   title = 'countries';
   regions: any[] = [{ name: 'Asia' }, { name: 'Europe' }];
@@ -35,6 +35,7 @@ export class AppComponent {
   getCountries(regionIndex) {
     this.countriesService.getCountries(this.regions[regionIndex].name).subscribe((countries: Country[]) => {
       this.store.dispatch(new CountryActions.SetCountries(countries));
+      this.store.dispatch(new CountryActions.SelectCountry(null));
     },
       () => (alert('Failed to retrieve countries data'))
     );

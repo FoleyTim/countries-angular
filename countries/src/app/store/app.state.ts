@@ -1,7 +1,7 @@
 import { Country } from '@app/models/country';
 
 export interface Appstate {
-  countries: Country[];
-  selectedCountry: Country;
+  countries: any;
+  selectedCountry: any;
 }
 
