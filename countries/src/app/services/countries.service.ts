@@ -24,8 +24,10 @@ export class CountriesService {
           countries.push(country);
         })
         return countries;
-      }), catchError(error => {
-        return throwError('failed to add countries in country service ', error);
+      })
+      , catchError(error => {
+        console.error('failed to retrieve countries in country service ', error);
+        throw throwError(error);
       })
     );
   }

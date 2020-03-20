@@ -32,7 +32,9 @@ export class AppComponent {
   getCountries(regionIndex) {
     this.countriesService.getCountries(this.regions[regionIndex].name).subscribe((countries: Country[]) => {
       this.store.dispatch(new CountryActions.SetCountries(countries));
-    });
+    },
+      () => (alert('API call failed'))
+    );
   }
 
   setCountry(countryIndex) {
