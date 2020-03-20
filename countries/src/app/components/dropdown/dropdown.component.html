@@ -1,6 +1,7 @@
 <div class="drop-down-container">
-        <label>{{label}}: </label>
-        <select class="select" (change)="onSelect($event)" formControlName="valueName">
-            <option *ngFor="let value of values;let i =index" [value]="i">{{value.name}}</option>
-         </select>
+    <label>{{label}}: </label>
+    <select class="select" (change)="onSelect($event)" formControlName="valueName">
+        <option value="">Please select a value</option>
+        <option *ngFor="let value of values;let i =index" [value]="i">{{value.name}}</option>
+    </select>
 </div>
