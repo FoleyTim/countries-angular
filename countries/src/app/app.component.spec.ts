@@ -4,6 +4,8 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
+import { countryReducer } from '@app/store/reducers/country.reducer';
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -11,7 +13,9 @@ describe('AppComponent', () => {
       imports: [
         RouterTestingModule,
         HttpClientModule,
-        StoreModule
+        StoreModule.forRoot({
+          countries: countryReducer
+        }),
       ],
       declarations: [
         AppComponent
@@ -31,10 +35,4 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('countries');
   });
 
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('countries app is running!');
-  });
 });
