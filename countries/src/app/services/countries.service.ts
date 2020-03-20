@@ -15,12 +15,12 @@ export class CountriesService {
   ) { }
 
   getCountries(region): Observable<Country[]> {
-    let url: string = 'https://restcountries.eu/rest/v2/region/'
+    const url: string = 'https://restcountries.eu/rest/v2/region/'
     return this.http.get(`${url}${region}`).pipe(
       map((data: any) => {
         const countries: Country[] = []
         data.forEach((countryData) => {
-          const country = new Country(countryData);
+          const country: Country = countryData;
           countries.push(country);
         })
         return countries;

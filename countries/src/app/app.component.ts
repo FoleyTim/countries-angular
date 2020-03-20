@@ -4,7 +4,7 @@ import {Store } from '@ngrx/store';
 import * as CountryActions from '@app/store/actions/country.action';
 import { CountriesService } from './services/countries.service';
 import { Country } from './models/country';
-import { Appstate } from '@app/store/app.state';
+import { CountryState } from '@app/store/app.state';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +19,7 @@ export class AppComponent {
   selectedCountry: Country;
   constructor(
     private countriesService: CountriesService,
-    private store: Store<Appstate>
+    private store: Store<CountryState>
   ) {
     store.select('countries').subscribe((state) => {
       if (state) {

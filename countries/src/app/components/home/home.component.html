@@ -6,10 +6,10 @@
 
 <div class="content">
     <div class="dropdown-bar">
-        <dropdown [values]="regions" [label]="'Region'" (selectEvent)='getCountries($event)'></dropdown>
-        <dropdown *ngIf="countries" [values]="countries" [label]="'Country'" (selectEvent)='setCountry($event)'></dropdown>
+        <app-dropdown [values]="regions" [label]="'Region'" (selectEvent)='getCountries($event)'></app-dropdown>
+        <app-dropdown *ngIf="countries" [values]="countries" [label]="'Country'" (selectEvent)='setCountry($event)'></app-dropdown>
     </div>
     <div class="country-details" >
-        <country-details *ngIf="selectedCountry" [country]="selectedCountry" ></country-details>
+        <app-country-details *ngIf="selectedCountry" [country]="selectedCountry" ></app-country-details>
     </div>
 </div>

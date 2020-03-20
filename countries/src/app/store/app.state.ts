@@ -1,6 +1,6 @@
 import { Country } from '@app/models/country';
 
-export interface Appstate {
+export interface CountryState {
   countries: any;
   selectedCountry: any;
 }

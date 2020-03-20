@@ -1,10 +1,8 @@
-import { Action } from '@ngrx/store';
-import { Country } from '@app/models/country';
-import { Currency } from '@app/models/currency';
+// import { Action } from '@ngrx/store';
 import * as CountryActions from '@app/store/actions/country.action';
-import {Appstate} from '@app/store/app.state'
+import {CountryState} from '@app/store/app.state';
 
-export function countryReducer(state: Appstate, action: CountryActions.Actions) {
+export function countryReducer(state: CountryState, action: CountryActions.Actions) {
     switch (action.type) {
         case CountryActions.SET_COUNTRIES:
             return { ...state, countries: action.payload };

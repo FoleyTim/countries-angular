@@ -1,9 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-import { Country } from '../../models/country';
-import { Currency } from 'src/app/models/currency';
+import { Country } from '@app/models/country';
 @Component({
-  selector: 'country-details',
+  selector: 'app-country-details',
   templateUrl: './country-details.component.html',
   styleUrls: ['./country-details.component.scss']
 })

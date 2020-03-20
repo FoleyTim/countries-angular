@@ -4,7 +4,7 @@ import { CountriesService } from '../../services/countries.service';
 import { Country } from '../../models/country'
 
 @Component({
-  selector: 'dropdown',
+  selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
   styleUrls: ['./dropdown.component.scss']
 })

@@ -1,20 +1,7 @@
-import { Currency } from './currency'
-export class Country {
+export interface Country {
     name: string;
     capital: string;
-    currencies: Currency[];
+    currencies: any[];
     population: string;
     flag: string;
-
-    constructor(data: any) {
-        this.name = data.name;
-        this.capital = data.capital;
-        const currencies: Currency[] = []
-        data.currencies.forEach(currency => {
-            currencies.push(new Currency(currency));
-        });
-        this.currencies = currencies;
-        this.population = data.population;
-        this.flag = data.flag;
-    }
 }
