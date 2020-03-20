@@ -1,21 +1,21 @@
 $nav-grey: #26282b;
 #logo{
   padding:10px;
+  width: 5%;
+  height: auto;
 }
 #title{
   display: flex;
   align-items: center;
 }
 .toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
+    position: relative;
+    height: 10vh;
     background-color: $nav-grey;
     color: white;
     font-weight: 600;
     display: flex;
+    width:100%;
   }
   .dropdown-bar{
     display: flex;
@@ -34,4 +34,12 @@ $nav-grey: #26282b;
   .content {
     margin-top: 82px;
     padding: 0 16px;
+    width:100%;
+  }
+
+  @media only screen and (min-width: 3000px) {
+    /* For 4k: */
+    #title{
+      font-size: 50px;
+    }
   }
