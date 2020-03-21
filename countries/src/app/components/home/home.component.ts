@@ -13,8 +13,6 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void { }
-  getCountries(region) { }
-  setCountry(country) {
-    this.selectedCountry = country;
-  }
+  getCountries(a) {}
+  setCountry(a) {}
 }

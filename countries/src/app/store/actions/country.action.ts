@@ -10,7 +10,7 @@ export class SetCountries implements Action {
     constructor(public payload: Country[]) { }
 }
 
-export class SelectCountry implements Action { //not in use
+export class SelectCountry implements Action {
     readonly type = SELECT_COUNTRY;
     constructor(public payload: Country) {
 

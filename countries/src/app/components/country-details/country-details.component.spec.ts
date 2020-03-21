@@ -16,7 +16,7 @@ describe('CountryDetailsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CountryDetailsComponent);
     component = fixture.componentInstance;
-    component.country = { name: '', population: '', currencies: [], flag: '', capital: '' };
+    component.country = { name: '', population: 0, currencies: [], flag: '', capital: '' };
     fixture.detectChanges();
   });
 

@@ -15,8 +15,8 @@ export class CountriesService {
   ) { }
 
   getCountries(region): Observable<Country[]> {
-    const url: string = 'https://restcountries.eu/rest/v2/region/'
-    return this.http.get(`${url}${region}`).pipe(
+    const url = `https://restcountries.eu/rest/v2/region/${region}`;
+    return this.http.get(url).pipe(
       map((data: any) => {
         const countries: Country[] = []
         data.forEach((countryData) => {
