@@ -30,6 +30,7 @@ Things I would like to extend later:
 unit testing on app.component.ts (this would involve mocking the NgRx store)
 add state for API failure/in progress
 prettier CSS - maybe use a framework like bootstrap, use mixins, animations
+add responsiveness for mobile/tablet
 implement a middleware like NgRx effects 
 
 
