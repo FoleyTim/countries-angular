@@ -6,8 +6,8 @@
 
 <div class="content">
     <div class="dropdown-bar">
-        <app-dropdown [values]="regions" [label]="'Region'" (selectEvent)='getCountries($event)'></app-dropdown>
-        <app-dropdown *ngIf="countries" [values]="countries" [label]="'Country'" (selectEvent)='setCountry($event)'></app-dropdown>
+        <app-dropdown [values]="regions" id="region-drop-down" [label]="'Region'" (selectEvent)='getCountries($event)'></app-dropdown>
+        <app-dropdown *ngIf="countries" id="countries-drop-down"  [values]="countries" [label]="'Country'" (selectEvent)='setCountry($event)'></app-dropdown>
     </div>
     <div class="country-details" >
         <app-country-details *ngIf="selectedCountry" [country]="selectedCountry" ></app-country-details>
