@@ -39,7 +39,7 @@ describe('CountriesService', () => {
       });
       const request = httpMock.expectOne(`https://restcountries.eu/rest/v2/region/test`);
       expect(request.request.method).toBe('GET');
-      request.flush(mockResponse)
+      request.flush(mockResponse);
     });
   });
 });

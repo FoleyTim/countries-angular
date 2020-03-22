@@ -27,7 +27,7 @@ When the user selects a country name from the country dropdown, the country data
 
 
 Things I would like to extend later:
-unit testing on app.component.ts (this would involve mocking the NgRx store)
+unit testing on app.component.ts (this would involve mocking the NgRx store) + test that in dropdown component event is emitted when onSelect() is called
 add state for API failure/in progress
 prettier CSS - maybe use a framework like bootstrap, use mixins, animations
 add responsiveness for mobile/tablet

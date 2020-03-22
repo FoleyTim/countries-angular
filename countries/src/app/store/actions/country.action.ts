@@ -3,7 +3,7 @@ import { Action } from '@ngrx/store';
 import { Country } from '../../models/country';
 
 export const SET_COUNTRIES = '[COUNTRY] Add';
-export const SELECT_COUNTRY = '[COUNTRY] SELECT';
+export const SELECT_COUNTRY = '[COUNTRY] Select';
 
 export class SetCountries implements Action {
     readonly type = SET_COUNTRIES;

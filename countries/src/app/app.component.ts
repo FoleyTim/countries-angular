@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import {Store } from '@ngrx/store';
 
+import { Country } from '@app/models/country';
 import * as CountryActions from '@app/store/actions/country.action';
-import { CountriesService } from './services/countries.service';
-import { Country } from './models/country';
+import { CountriesService } from '@app/services/countries.service';
 import { CountryState } from '@app/store/app.state';
 
 @Component({

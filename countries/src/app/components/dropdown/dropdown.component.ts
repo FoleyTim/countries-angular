@@ -1,8 +1,5 @@
 import { Component, EventEmitter, OnInit, Input, Output } from '@angular/core';
 
-import { CountriesService } from '../../services/countries.service';
-import { Country } from '../../models/country'
-
 @Component({
   selector: 'app-dropdown',
   templateUrl: './dropdown.component.html',
