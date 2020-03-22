@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Action } from '@ngrx/store';
 import { Country } from '../../models/country';
 
-export const SET_COUNTRIES = '[COUNTRY] Add';
+export const SET_COUNTRIES = '[COUNTRY] Set';
 export const SELECT_COUNTRY = '[COUNTRY] Select';
 
 export class SetCountries implements Action {
